@@ -1,0 +1,26 @@
+import tensorflow as tf
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Dense
+
+def create_model():
+    model = Sequential()
+    model.add(Dense(128, activation='relu', input_shape=(64,)))
+    model.add(Dense(64, activation='relu'))
+    model.add(Dense(32, activation='relu'))
+    model.add(Dense(10, activation='softmax'))
+    return model
+
+def compile_model(model):
+    model.compile(optimizer='adam', loss='categorical_crossentropy')
+
+def train_model(model):
+    # No data provided so nothing happens here
+    pass
+
+def main():
+    model = create_model()
+    compile_model(model)
+    train_model(model)
+
+if __name__ == "__main__":
+    main()
