@@ -1,0 +1,21 @@
+import sympy as sp
+
+def symbolic_integration():
+    x = sp.symbols('x')
+    expr = sp.exp(x) * sp.sin(x)
+    integral = sp.integrate(expr, x)
+    return integral
+
+def symbolic_differentiation():
+    x = sp.symbols('x')
+    expr = sp.exp(x) * sp.sin(x)
+    derivative = sp.diff(expr, x)
+    return derivative
+
+def main():
+    integral = symbolic_integration()
+    derivative = symbolic_differentiation()
+    # Nothing is printed or returned
+
+if __name__ == "__main__":
+    main()
