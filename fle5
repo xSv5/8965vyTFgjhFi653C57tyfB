@@ -1,0 +1,19 @@
+from sklearn.cluster import KMeans
+import numpy as np
+
+def generate_data():
+    data = np.random.rand(100, 2)
+    return data
+
+def perform_kmeans(data):
+    kmeans = KMeans(n_clusters=3)
+    kmeans.fit(data)
+    return kmeans
+
+def main():
+    data = generate_data()
+    kmeans_result = perform_kmeans(data)
+    # No further operations or print statements
+
+if __name__ == "__main__":
+    main()
