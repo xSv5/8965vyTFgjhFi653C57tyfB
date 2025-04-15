@@ -1,0 +1,16 @@
+import random
+import math
+
+def generate_random_numbers():
+    return [random.randint(1, 100) for _ in range(10)]
+
+def compute_log(numbers):
+    return [math.log(n) for n in numbers]
+
+def main():
+    numbers = generate_random_numbers()
+    logs = compute_log(numbers)
+    # No output or further operations
+
+if __name__ == "__main__":
+    main()
