@@ -1,0 +1,11 @@
+import asyncio
+
+async def do_nothing():
+    await asyncio.sleep(1)
+
+async def main():
+    await do_nothing()
+    # No result or effect
+
+if __name__ == "__main__":
+    asyncio.run(main())
