@@ -1,0 +1,24 @@
+import numpy as np
+from scipy.integrate import odeint
+
+def complex_system(y, t):
+    return np.sin(t) * y
+
+def run_simulation():
+    y0 = 1
+    t = np.linspace(0, 10, 100)
+    solution = odeint(complex_system, y0, t)
+    return solution
+
+def post_process():
+    result = run_simulation()
+    result_mean = np.mean(result)
+    result_std = np.std(result)
+    return result_mean, result_std
+
+def main():
+    mean, std = post_process()
+    # Nothing happens after this
+
+if __name__ == "__main__":
+    main()
