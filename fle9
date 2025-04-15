@@ -1,0 +1,17 @@
+import networkx as nx
+
+def generate_graph():
+    G = nx.erdos_renyi_graph(100, 0.05)
+    return G
+
+def compute_degree_distribution(G):
+    degree_sequence = [d for n, d in G.degree()]
+    return degree_sequence
+
+def main():
+    G = generate_graph()
+    degree_dist = compute_degree_distribution(G)
+    # No effect or further use of the degree distribution
+
+if __name__ == "__main__":
+    main()
